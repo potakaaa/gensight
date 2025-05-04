@@ -51,7 +51,7 @@ export default function SideBar() {
             </div>
           </div>
           <div className="flex gap-4 items-center">
-            <LogOut color="#ef4444"/>
+            <LogOut color="#ef4444" />
             <Link href="/logout" className="text-sm font-medium text-red-500">
               Logout
             </Link>

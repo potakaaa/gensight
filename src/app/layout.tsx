@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "../components/sidebar";
 import React from "react";
+import Header from "@/components/header/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,11 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased flex flex-row`}
-      >
+      <body className={`${inter.className} antialiased flex flex-row`}>
         <SideBar />
-        {children}
+        <div className="flex flex-col w-full min-h-screen items-center max-w-8xl mx-auto px-12 py-14 gap-5">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
